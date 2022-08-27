@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        min-width: 300px;
+        text-align: center;
+    }
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+    }
+    .yellow {
+        color: #FBE36D;
+    }
+    .blue {
+        color: #588BE4;
+    }
+    p, .button {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+    }
+    .button{
+        background-color: #588BE4;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 2rem;
+        width: 4.5rem;
+        border-radius: 1rem;
+        /* animation: backgroundYellow 1s infinite; */
+        cursor: pointer; 
+    }
+    .row {
+        padding: 0 0.25rem;
+        pointer-events: none;
+    }
+    .circle{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2rem;
+        width:2rem;
+        border-radius: 50%;
+        background-color: #024ed0;
+        /* animation: moveCircleRight 1s infinite; */
+        pointer-events: none;
+
+    }
+
+    /* Animations */
+    @keyframes moveCircleRight{
+        from {
+            left: 0;
+            background-color: #588BE4;
+        }
+        to {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: #FBE36D;
+        }
+    }
+
+    @keyframes moveCircleLeft{
+        from {
+            left: 100%;
+            background-color: #588BE4;
+            transform: translateX(-100%);
+        }
+        to {
+            left: 0;
+            
+            background-color: #024ed0;
+        }
+    }
+
+    @keyframes backgroundYellow{
+        from{
+            background-color: #588BE4;
+        }
+        to {
+            background-color: #FDFCA3;
+        }
+    }
+
+    @keyframes backgroundBlue{
+        from{
+            background-color: #FDFCA3;
+        }
+        to {
+            background-color: #588BE4;
+            
+        }
+    }
+
+    
+</style>
+
+<body class="popup">
+<h1><span class="yellow">Invert</span>.io<span class="blue"></span></h1>
+<p>Dark mode and light mode extension</p>
+    <div class="button">
+        <div class="row">On</div>
+        <div class="row">Off</div>
+        <div class="circle"></div>
+    </div>
+</body>
+<script src="popup.js"></script>
+</html>
