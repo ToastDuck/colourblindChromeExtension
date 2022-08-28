@@ -17,127 +17,55 @@
 </head>
 <style>
     html {
-        background-color: #ffffff;
+        background-color: #F8F8F8;
     }
     body {
-        min-width: 300px;
+        width: 450px;
         text-align: center;
+        padding: 25px 5px 25px 5px;
     }
     h1 {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'MADE TOMMY';
+        background: linear-gradient(to bottom right, #8EC5FC, #E0C3FC);
+        color: #FFFFFF;
+        font-size: 32px;
+        margin: 2px 60px 0px 60px;
+        border-radius: 4px;
     }
-    .yellow {
-        color: #d102ff;
-    }
-    .blue {
-        color: #588BE4;
-    }
-    p, .button {
-        font-family: 'Montserrat', sans-serif;
-    }
-    .button{
-        background-color: #588BE4;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        height: 2rem;
-        width: 4.5rem;
-        border-radius: 1rem;
-        /* animation: backgroundYellow 1s infinite; */
-        cursor: pointer; 
-    }
-    .row {
-        padding: 0 0.25rem;
-        pointer-events: none;
-    }
-    .circle{
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 2rem;
-        width:2rem;
-        border-radius: 50%;
-        background-color: #024ed0;
-        /* animation: moveCircleRight 1s infinite; */
-        pointer-events: none;
-
-    }
-
-    .buttonName {
-        text-align: left;
-    }
-
-    /* Animations */
-    @keyframes moveCircleRight{
-        from {
-            left: 0;
-            background-color: #588BE4;
-        }
-        to {
-            left: 100%;
-            transform: translateX(-100%);
-            background-color: #ffffff;
-        }
-    }
-
-    @keyframes moveCircleLeft{
-        from {
-            left: 100%;
-            background-color: #588BE4;
-            transform: translateX(-100%);
-        }
-        to {
-            left: 0;
-            
-            background-color: #024ed0;
-        }
-    }
-
-    @keyframes backgroundYellow{
-        from{
-            background-color: #588BE4;
-        }
-        to {
-            background-color: #FDFCA3;
-        }
-    }
-
-    @keyframes backgroundBlue{
-        from{
-            background-color: #FDFCA3;
-        }
-        to {
-            background-color: #588BE4;
-            
-        }
-    }
-
     
+    p {
+        font-family: 'Lato';
+        color: #9599E2;
+        font-weight: bold;
+        margin: 15px 0px 20px 0px;
+        font-size: 15px;
+    }
+
+    .button{
+        font-family: 'MADE TOMMY';
+        background: linear-gradient(to bottom right, #88C3FF,#72B6FB);
+        display: inline-block;
+        color: #FFFFFF;
+        margin: 0 10px 0 10px;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 15px;
+    }
 </style>
 
 <body class="popup">
 <h1><span class="yellow">ColourFix</span></h1>
-<p>Extension which aims to help make websites more accessible to colourblind individuals</p>
-        <span class="buttonName">Protanopia</span>
-        <div onClick="reply_click(this.id)" id="button1" class="button">
-            <div class="row">On</div>
-            <div class="row">Off</div>
-            <div class="circle"></div>
-        </div>
-        <span class="buttonName">Deutanopia</span>
-        <div onClick="reply_click(this.id)" id="button2" class="button">
-            <div class="row">On</div>
-            <div class="row">Off</div>
-            <div class="circle"></div>
-        </div>
-        <span class="buttonName">Tritanopia</span>
-        <div onClick="reply_click(this.id)" id="button3" class="button">
-            <div class="row">On</div>
-            <div class="row">Off</div>
-            <div class="circle"></div>
-        </div>
+<p>Adjusts colours to make websites more accessible for colourblind <br>
+    people. Click on one of the buttons below depending on <br>
+    which type of colourblindness you have.</p>
+        <!--<span class="buttonName">Protanopia</span>-->
+        <div onClick="reply_click(this.id)" id="button1" class="button">Protanopia</div>
+
+        <!--<span class="buttonName">Deutanopia</span>-->
+        <div onClick="reply_click(this.id)" id="button2" class="button">Deutanopia</div>
+
+        <!-- <span class="buttonName">Tritanopia</span> -->
+        <div onClick="reply_click(this.id)" id="button3" class="button">Tritanopia</div>
 </body>
 <script src="popup.js"></script>
 </html>
