@@ -5,19 +5,31 @@ if(document.querySelector(".popup"))
     
     let buttonOn = false;
 
+    // button animation
+    var button1 = document.querySelector("#button1"),
+        button2 = document.querySelector("#button2"),
+        button3 = document.querySelector("#button3");
+
+function changeColor() {
+  this.style.color = '#49A4FF';
+  return false;
+}
+
+button1.addEventListener("click", changeColor, false);
+button2.addEventListener("click", changeColor, false);
+button3.addEventListener("click", changeColor, false);
+
     $('div.button').on('click', function(){
         // alert($(this).attr("id"));
         var buttonId = $(this).attr("id");
         // alert(buttonId);
 
         // Protanopia
-        // Red Green colorblindness
+        // Red colorblindness
         if (buttonId == "button1") {
             // button.addEventListener("click", ()=> {
             if(!buttonOn){
                 buttonOn = true;
-                //circle.style.animation = "moveCircleRight 1s forwards";
-                //button.style.animation = "backgroundYellow 1s forwards";
                 chrome.tabs.executeScript({
                     file: "protanopiaOn.js"
                 })
@@ -25,10 +37,8 @@ if(document.querySelector(".popup"))
             }
             else {
                 buttonOn = false;
-                //circle.style.animation = "moveCircleLeft 1s forwards";
-                //button.style.animation = "backgroundBlue 1s forwards";
                 chrome.tabs.executeScript({
-                    file: "deutanopiaOff.js"
+                    file: "protanopiaOff.js"
                 })
             }
         }
@@ -38,8 +48,7 @@ if(document.querySelector(".popup"))
         if (buttonId == "button2") {
             if(!buttonOn){
                 buttonOn = true;
-                // circle.style.animation = "moveCircleRight 1s forwards";
-                // button.style.animation = "backgroundYellow 1s forwards";
+                
                 chrome.tabs.executeScript({
                     file: "deutanopiaOn.js"
                 })
@@ -47,8 +56,7 @@ if(document.querySelector(".popup"))
             }
             else {
                 buttonOn = false;
-                // circle.style.animation = "moveCircleLeft 1s forwards";
-                // button.style.animation = "backgroundBlue 1s forwards";
+                
                 chrome.tabs.executeScript({
                     file: "deutanopiaOff.js"
                 })
@@ -59,8 +67,7 @@ if(document.querySelector(".popup"))
         if (buttonId == "button3") {
             if(!buttonOn){
                 buttonOn = true;
-                // circle.style.animation = "moveCircleRight 1s forwards";
-                // button.style.animation = "backgroundYellow 1s forwards";
+                
                 chrome.tabs.executeScript({
                     file: "tritanopiaOn.js"
                 })
@@ -68,8 +75,7 @@ if(document.querySelector(".popup"))
             }
             else {
                 buttonOn = false;
-                // circle.style.animation = "moveCircleLeft 1s forwards";
-                // button.style.animation = "backgroundBlue 1s forwards";
+                
                 chrome.tabs.executeScript({
                     file: "tritanopiaOff.js"
                 })

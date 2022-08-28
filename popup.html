@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
+    <title>Document</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<style>
+    html {
+        background-color: #F8F8F8;
+    }
+    body {
+        width: 450px;
+        text-align: center;
+        padding: 25px 5px 25px 5px;
+    }
+    h1 {
+        font-family: 'MADE TOMMY';
+        background: linear-gradient(to bottom right, #8EC5FC, #E0C3FC);
+        color: #FFFFFF;
+        font-size: 32px;
+        margin: 2px 60px 0px 60px;
+        border-radius: 4px;
+    }
+    
+    #description {
+        font-family: 'Lato';
+        color: #9599E2;
+        font-weight: bold;
+        margin: 15px 0px 20px 0px;
+        font-size: 15px;
+    }
+
+    .button{
+        font-family: 'MADE TOMMY';
+        background: linear-gradient(to bottom right, #8EC5FC, #72B6FB);
+        display: inline-block;
+        color: #FFFFFF;
+        margin: 0 10px 0 10px;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 15px;
+        border: none;
+        outline: none;
+    }
+
+    #smallText {
+        color: #6F75D8;
+        font-family: 'Lato';
+        font-size: 10px;
+    }
+
+</style>
+
+<body class="popup">
+<h1><span class="yellow">ColourFix</span></h1>
+<p id="description">
+    Adjusts colours to make websites more accessible for people that <br>
+    are colourblind. Click on one of the buttons below depending on <br>
+    which type of colourblindness you have.</p>
+       
+       <div onClick="reply_click(this.id)" id="button1" class="button">Protanopia</div>
+       
+        <div onClick="reply_click(this.id)" id="button2" class="button">Deutanopia</div>
+
+        <div onClick="reply_click(this.id)" id="button3" class="button">Tritanopia</div>
+  <p id="smallText">Please click on the button to disable the filter before trying other filters.</p>
+</body>
+<script src="popup.js"></script>
+</html>
