@@ -1,0 +1,22 @@
+{
+    "name": "ColourFix",
+    "description": "Makes websites more accesible for colourblind individuals",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "popup.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_title": "ColourFix",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "https://*/*",
+        "https://*/*",
+        "tabs"
+    ],
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}
