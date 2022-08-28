@@ -10,6 +10,8 @@ if(document.querySelector(".popup"))
         var buttonId = $(this).attr("id");
         // alert(buttonId);
 
+        // Protanopia
+        // Red colorblindness
         if (buttonId == "button1") {
             // button.addEventListener("click", ()=> {
             if(!buttonOn){
@@ -17,7 +19,7 @@ if(document.querySelector(".popup"))
                 circle.style.animation = "moveCircleRight 1s forwards";
                 button.style.animation = "backgroundYellow 1s forwards";
                 chrome.tabs.executeScript({
-                    file: "appOn.js"
+                    file: "protanopiaOn.js"
                 })
         
             }
@@ -26,12 +28,52 @@ if(document.querySelector(".popup"))
                 circle.style.animation = "moveCircleLeft 1s forwards";
                 button.style.animation = "backgroundBlue 1s forwards";
                 chrome.tabs.executeScript({
-                    file: "appOff.js"
+                    file: "protanopiaOff.js"
                 })
             }
+        }
             // }) 
-        } else {
-            alert("aaaa");
+        // Deutanopia
+        // Red-green color blindness
+        if (buttonId == "button2") {
+            if(!buttonOn){
+                buttonOn = true;
+                // circle.style.animation = "moveCircleRight 1s forwards";
+                // button.style.animation = "backgroundYellow 1s forwards";
+                chrome.tabs.executeScript({
+                    file: "deutanopiaOn.js"
+                })
+        
+            }
+            else {
+                buttonOn = false;
+                // circle.style.animation = "moveCircleLeft 1s forwards";
+                // button.style.animation = "backgroundBlue 1s forwards";
+                chrome.tabs.executeScript({
+                    file: "deutanopiaOff.js"
+                })
+            }
+        }
+        // Tritanopia
+        // Blue-Yellow color blindness
+        if (buttonId == "button3") {
+            if(!buttonOn){
+                buttonOn = true;
+                // circle.style.animation = "moveCircleRight 1s forwards";
+                // button.style.animation = "backgroundYellow 1s forwards";
+                chrome.tabs.executeScript({
+                    file: "tritanopiaOn.js"
+                })
+        
+            }
+            else {
+                buttonOn = false;
+                // circle.style.animation = "moveCircleLeft 1s forwards";
+                // button.style.animation = "backgroundBlue 1s forwards";
+                chrome.tabs.executeScript({
+                    file: "tritanopiaOff.js"
+                })
+            }
         }
     });
 
